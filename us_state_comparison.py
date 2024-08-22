@@ -837,8 +837,7 @@ for col in feature_columns:
 # Sort by the overall score
 df_sorted = df.sort_values(by="Overall Score", ascending=False)
 
-# Convert sorted DataFrame to CSV format
-csv_output = df_sorted.to_csv(index=False, sep="\t")
+# Save DataFrame to Excel
+df_sorted.to_excel("results.xlsx", index=False)
 
-# Print the CSV output
-print(csv_output)
+print("Data has been saved to results.xlsx")
